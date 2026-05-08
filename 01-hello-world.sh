@@ -2,3 +2,4 @@
 # first line is the shebang, it tells the system which interpreter to use to execute the script
 echo "Hello World!"
 echo "This is my first script"
+echo "I am learning bash scripting"
