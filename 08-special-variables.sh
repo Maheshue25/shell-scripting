@@ -8,3 +8,4 @@ echo "Home directory of the user: $HOME"
 echo "which user is running the script: $(whoami)"
 echo "Current process ID of the script: $$"
 echo "process ID of the last background command: $!"
+sleep 5 & # Run sleep in the background to demonstrate $!
