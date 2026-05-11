@@ -9,15 +9,15 @@ LOG_FILE=$(echo $0 | cut -d "." -f 1)  # Define a variable LOG_FILE that contain
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S") # Define a variable TIMESTAMP that contains the current date and time in a specific format. This is used to create unique log file names and to record when the script was executed.
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log" # Define a variable LOG_FILE_NAME that combines the LOGS_FOLDER, LOG_FILE, and TIMESTAMP to create a unique log file name for each execution of the script. This ensures that logs are organized and easily identifiable.
 
-VALIDATE(){  # Define a function named VALIDATE that takes two arguments: the first is the exit status of a command, and the second is a message describing the action being validated. This function will be used to check if a command executed successfully and to print appropriate messages.
-    if [ $1 -ne 0 ]  # Check if the first argument (exit status) is not equal to 0, which indicates a failure.
+VALIDATE(){  
+    if [ $1 -ne 0 ]  
     then 
         echo -e "$2 ... $R FAILURE"
         exit 1
     else
         echo -e "$2 ... $G SUCCESS"
     fi
-}
+} 
 
 echo "Script execution started at $TIMESTAMP" &>>$LOG_FILE_NAME
 
